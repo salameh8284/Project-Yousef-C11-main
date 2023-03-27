@@ -58,6 +58,11 @@ function draw() {
     path.y = height/2;
   }
 
+ console.log("boy y =="+boy.y) ;
+if (keyDown("space") && boy.y>=220)
+ { 
+  boy.y=boy.y-10;
+}
   /*if(path.y > 400 ){
    
   path.y = height/2;
