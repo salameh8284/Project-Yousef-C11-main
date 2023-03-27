@@ -25,10 +25,11 @@ boy.addAnimation("JakeRunning",boyImg);
 
 leftBoundary=createSprite(0,0,100,800);
 
-// leftBoundary.invisible = false;
+
+//leftBoundary.invisible = false;
 // leftBoundary.visible = true;
 // leftBoundary.invisible = true;
-// leftBoundary.visible = false;
+leftBoundary.visible = false;
 
 
 rightBoundary=createSprite(410,0,100,800);
@@ -42,25 +43,27 @@ function draw() {
   boy.x = World.mouseX;
   
   edges= createEdgeSprites();
-  boy.collide(edges[3]);
+  
+  boy.collide(edges[3]);//what is this
   boy.collide(leftBoundary);
   boy.collide(rightBoundary);
   
   //code to reset the background
 
-  /*if(path.y > 400 ){
+  /*
+  if(path.y > 400 ){
     path.y = height/2;
-  }*/
+ */
 
   /*if(path.y > 400 ){
    
   path.y = height/2;
   }*/
 
-  /*if(path.y > 400 ){
-path.y = height/2;}*/
+if(path.y > 400 ){
+path.y = height/2;}
 
-/*if(path.y > 400 ){path.y = height/2;}*/
+//if(path.y > 400 ){path.y = height/2;}
   
   drawSprites();
 }
