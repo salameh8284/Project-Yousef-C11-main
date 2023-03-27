@@ -17,6 +17,7 @@ path.addImage(pathImg);
 path.velocityY = 4;
 path.scale=1.2;
 
+
 //creating boy running
 boy = createSprite(180,340,30,30);
 boy.scale=0.08;
@@ -34,10 +35,12 @@ leftBoundary.visible = false;
 
 rightBoundary=createSprite(410,0,100,800);
 rightBoundary.visible = false;
+
+
 }
 
 function draw() {
-  background(0);
+  background("green");
   path.velocityY = 4;
   
   boy.x = World.mouseX;
@@ -50,20 +53,21 @@ function draw() {
   
   //code to reset the background
 
-  /*
+ 
   if(path.y > 400 ){
     path.y = height/2;
- */
+  }
 
   /*if(path.y > 400 ){
    
   path.y = height/2;
   }*/
 
-if(path.y > 400 ){
-path.y = height/2;}
+//if(path.y > 400 ){
+//path.y = height/2;}
 
 //if(path.y > 400 ){path.y = height/2;}
   
   drawSprites();
+  //console.log("this is the location of the boy "+boy.x);
 }
